@@ -1,5 +1,5 @@
 # StoryBB
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) 
+[![Build Status](https://travis-ci.org/StoryBB/StoryBB.svg?branch=master)](https://travis-ci.org/StoryBB/StoryBB) [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) 
 ![GitHub last commit](https://img.shields.io/github/last-commit/storybb/storybb/master.svg)
 
 This is StoryBB - a new forum software designed for roleplaying and collaborative storytelling online.
