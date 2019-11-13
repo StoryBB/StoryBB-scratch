@@ -1,0 +1,18 @@
+sudo: required
+language: php
+php:
+  - 7.0
+  - 7.2
+  - 7.3
+  - 7.4snapshot
+
+script:
+- sudo add-apt-repository ppa:git-core/ppa -y
+- sudo apt-get update
+- if find . -name "*.php" ! -path "./source/vendor/*" -exec php -l {} 2>&1 \; | grep "syntax
+  error, unexpected"; then exit 1; fi
+- curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+- php phpcs.phar .
+
+notifications:
+  email: false
