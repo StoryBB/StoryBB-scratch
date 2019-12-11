@@ -1,0 +1,4 @@
+# StoryBB internal files should not be committed generally.
+internal/*
+!internal/.htaccess
+!internal/index.php

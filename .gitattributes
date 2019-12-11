@@ -1,0 +1,11 @@
+# Always have Linux style line endings where possible.
+* text
+
+# Force things we know to be binary to binary.
+*.png binary
+*.jpg binary
+*.gif binary
+*.tgz binary
+*.zip binary
+*.tar.gz binary
+*.ttf binary
