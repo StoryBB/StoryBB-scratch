@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {"StoryBB\\": "source/StoryBB/"}
+    },
+    "config": {
+        "vendor-dir": "source/vendor"
+    },
+    "require": {
+        "symfony/console": "~5.0",
+        "symfony/polyfill-iconv": "~1.0",
+        "symfony/polyfill-mbstring": "~1.0",
+        "guzzlehttp/guzzle": "~6.0"
+    }
+}
