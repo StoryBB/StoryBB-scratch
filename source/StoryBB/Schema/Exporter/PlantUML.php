@@ -9,9 +9,11 @@
  * @version 1.0 Alpha 1
  */
 
-namespace StoryBB\Schema;
+namespace StoryBB\Schema\Exporter;
 
-class PlantUMLExporter
+use StoryBB\Schema\Schema;
+
+class PlantUML
 {
 	private $schema = null;
 	private $uml = [];

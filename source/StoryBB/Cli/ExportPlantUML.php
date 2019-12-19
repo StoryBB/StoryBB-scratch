@@ -13,6 +13,8 @@
 namespace StoryBB\Cli;
 
 use StoryBB\Cli\Command as StoryBBCommand;
+use StoryBB\Schema\Exporter\PlantUML;
+use StoryBB\Schema\Schema as StoryBBSchema;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -37,7 +39,7 @@ class ExportPlantUML extends Command implements StoryBBCommand
 			$path = getcwd() . substr($path, 1);
 		}
 
-		$exporter = new \StoryBB\Schema\PlantUMLExporter(new \StoryBB\Schema\Schema);
+		$exporter = new PlantUML(new StoryBBSchema);
 		$uml = $exporter->output();
 		if (@file_put_contents($path, $uml))
 		{
