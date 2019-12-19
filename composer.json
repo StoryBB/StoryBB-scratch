@@ -6,6 +6,7 @@
         "vendor-dir": "source/vendor"
     },
     "require": {
+        "doctrine/dbal": "~2.10.0",
         "symfony/console": "~5.0",
         "symfony/polyfill-iconv": "~1.0",
         "symfony/polyfill-mbstring": "~1.0",
