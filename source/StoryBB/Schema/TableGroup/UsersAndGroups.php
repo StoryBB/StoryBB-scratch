@@ -28,7 +28,7 @@ class UsersAndGroups
 		return [
 			Table::make('user',
 				[
-					'id' => Column::mediumint()->auto_increment(),
+					'id' => Column::int()->auto_increment(),
 					'username' => Column::varchar(255),
 					'displayname' => Column::varchar(255),
 					'password' => Column::varchar(255),
@@ -41,7 +41,7 @@ class UsersAndGroups
 			Table::make('character',
 				[
 					'id' => Column::int()->auto_increment(),
-					'user' => Column::mediumint(),
+					'user' => Column::int(),
 					'displayname' => Column::varchar(255),
 				],
 				[
@@ -64,7 +64,7 @@ class UsersAndGroups
 			Table::make('user_group',
 				[
 					'id' => Column::int()->auto_increment(),
-					'user' => Column::mediumint(),
+					'user' => Column::int(),
 					'group' => Column::smallint(),
 				],
 				[

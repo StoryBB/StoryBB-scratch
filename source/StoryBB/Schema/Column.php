@@ -37,21 +37,6 @@ class Column
 	}
 
 	/**
-	 * Factory function to create a new Column of tinyint type.
-	 *
-	 * @return Column instance
-	 */
-	public static function tinyint()
-	{
-		return new Column([
-			'type' => 'tinyint',
-			'default' => 0,
-			'size' => 4,
-			'unsigned' => true,
-		]);
-	}
-
-	/**
 	 * Factory function to create a new Column of smallint type.
 	 *
 	 * @return Column instance
@@ -62,21 +47,6 @@ class Column
 			'type' => 'smallint',
 			'default' => 0,
 			'size' => 6,
-			'unsigned' => true,
-		]);
-	}
-
-	/**
-	 * Factory function to create a new Column of mediumint type.
-	 *
-	 * @return Column instance
-	 */
-	public static function mediumint()
-	{
-		return new Column([
-			'type' => 'mediumint',
-			'default' => 0,
-			'size' => 8,
 			'unsigned' => true,
 		]);
 	}
@@ -237,7 +207,7 @@ class Column
 	 */
 	public function auto_increment()
 	{
-		if (!in_array($this->column['type'], ['tinyint', 'smallint', 'mediumint', 'int', 'bigint', 'float']))
+		if (!in_array($this->column['type'], ['smallint', 'int', 'bigint', 'float']))
 		{
 			throw new InvalidColumnTypeException($this->column['type'] . ' cannot be autoincrement');
 		}
@@ -254,7 +224,7 @@ class Column
 	 */
 	public function signed()
 	{
-		if (!in_array($this->column['type'], ['tinyint', 'smallint', 'mediumint', 'int', 'bigint', 'float']))
+		if (!in_array($this->column['type'], ['smallint', 'int', 'bigint', 'float']))
 		{
 			throw new InvalidColumnTypeException($this->column['type'] . ' cannot be signed');
 		}
@@ -308,7 +278,7 @@ class Column
 	 */
 	public function size(int $size)
 	{
-		if (!in_array($this->column['type'], ['tinyint', 'smallint', 'mediumint', 'int', 'bigint', 'char', 'varchar', 'varbinary']))
+		if (!in_array($this->column['type'], ['smallint', 'int', 'bigint', 'char', 'varchar', 'varbinary']))
 		{
 			throw new InvalidColumnTypeException($this->column['type'] . ' cannot have a size');
 		}

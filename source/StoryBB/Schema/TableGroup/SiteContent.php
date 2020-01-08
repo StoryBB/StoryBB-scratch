@@ -28,9 +28,9 @@ class SiteContent
 		return [
 			Table::make('sitenode',
 				[
-					'id' => Column::mediumint()->auto_increment(),
+					'id' => Column::int()->auto_increment(),
 					'name' => Column::varchar(255),
-					'parent' => Column::mediumint(),
+					'parent' => Column::int(),
 					'description' => Column::text(),
 					'nodetype' => Column::varchar(255),
 					'visible' => Column::tinyint(),
@@ -45,7 +45,7 @@ class SiteContent
 			Table::make('sitenode_access',
 				[
 					'id' => Column::int()->auto_increment(),
-					'sitenode' => Column::mediumint(),
+					'sitenode' => Column::int(),
 					'group' => Column::smallint(),
 					'can_see' => Column::tinyint(),
 					'can_access' => Column::tinyint(),

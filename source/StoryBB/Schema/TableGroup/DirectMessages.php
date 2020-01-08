@@ -28,7 +28,7 @@ class DirectMessages
 		return [
 			Table::make('direct_message',
 				[
-					'id' => Column::mediumint()->auto_increment(),
+					'id' => Column::int()->auto_increment(),
 					'subject' => Column::varchar(255),
 				],
 				[
@@ -38,8 +38,8 @@ class DirectMessages
 			Table::make('direct_message_participants',
 				[
 					'id' => Column::int()->auto_increment(),
-					'direct_message' => Column::mediumint(),
-					'user' => Column::mediumint(),
+					'direct_message' => Column::int(),
+					'user' => Column::int(),
 				],
 				[
 					Index::primary(['id']),
@@ -55,7 +55,7 @@ class DirectMessages
 				[
 					'id' => Column::int()->auto_increment(),
 					'direct_message' => Column::int(),
-					'user' => Column::mediumint(),
+					'user' => Column::int(),
 					'messagebody' => Column::mediumtext(),
 					'datetime' => Column::datetime(),
 				],

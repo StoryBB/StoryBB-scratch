@@ -28,7 +28,7 @@ class Roles
 		return [
 			Table::make('role',
 				[
-					'id' => Column::mediumint()->auto_increment(),
+					'id' => Column::int()->auto_increment(),
 					'name' => Column::varchar(255),
 				],
 				[
@@ -38,7 +38,7 @@ class Roles
 			Table::make('role_group',
 				[
 					'id' => Column::int()->auto_increment(),
-					'role' => Column::mediumint(),
+					'role' => Column::int(),
 					'group' => Column::smallint(),
 				],
 				[
@@ -52,7 +52,7 @@ class Roles
 			Table::make('role_permission',
 				[
 					'id' => Column::int()->auto_increment(),
-					'role' => Column::mediumint(),
+					'role' => Column::int(),
 					'permission' => Column::varchar(255),
 				],
 				[
@@ -65,8 +65,8 @@ class Roles
 			Table::make('role_sitenode',
 				[
 					'id' => Column::int()->auto_increment(),
-					'role' => Column::mediumint(),
-					'sitenode' => Column::mediumint(),
+					'role' => Column::int(),
+					'sitenode' => Column::int(),
 				],
 				[
 					Index::primary(['id']),

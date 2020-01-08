@@ -50,7 +50,7 @@ class ForumContent
 			),
 			Table::make('forum_topic',
 				[
-					'id' => Column::mediumint()->auto_increment(),
+					'id' => Column::int()->auto_increment(),
 					'subject' => Column::varchar(255),
 					'slug' => Column::varchar(255),
 					'forum_node' => Column::int(),
@@ -68,8 +68,8 @@ class ForumContent
 			Table::make('forum_post',
 				[
 					'id' => Column::int()->auto_increment(),
-					'topic' => Column::mediumint(),
-					'posted_user' => Column::mediumint(),
+					'topic' => Column::int(),
+					'posted_user' => Column::int(),
 					'posted_character' => Column::int(),
 				],
 				[
